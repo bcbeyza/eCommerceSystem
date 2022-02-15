@@ -12,9 +12,11 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-	User user=new User("Mina","Cetiner","minactn@gmail.com","11234389643");
+	User user=new User("mina","Cetiner","minactn@gmail.com","11234389643");
 	UserService userService=new UserManager(new HibernateUserDao(),new MailVerificationManager(),new UserCheckManager(),new GoogleLoggerManagerAdapter());
-	userService.signUp(user);
+
+	userService.signIn(user);
+	
 		
 		
 
